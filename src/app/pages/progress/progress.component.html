@@ -4,12 +4,21 @@
       <h4 class="card-title">Striped Progress bar</h4>
 
       <div class="progress m-t-20">
-        <!-- <div
+        <div
           class="progress-bar bg-primary progress-bar-striped active"
           style="height:10px;"
-          [style.width.%]="progreso"
+          [style.width.%]="progreso1"
           role="progressbar"
-        ></div> -->
+        ></div>
+      </div>
+
+      <div class="progress m-t-20">
+        <div
+          class="progress-bar bg-primary progress-bar-striped active"
+          style="height:10px;"
+          [style.width.%]="progreso2"
+          role="progressbar"
+        ></div>
       </div>
     </div>
   </div>
@@ -19,23 +28,15 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <!-- <div class="input-group">
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button"><i class="fa fa-minus" (click)="cambiarValor(-5)"></i></button>
-          </span>
-          <input type="text" class="form-control" placeholder="Product name" [(ngModel)]="progreso" />
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button" (click)="cambiarValor(5)"><i class="fa fa-plus"></i></button>
-          </span>
-        </div> -->
+        <app-incrementador [valor]="progreso1" (valorSalida)="progreso1 = $event" btnClass="btn-info"></app-incrementador>
       </div>
     </div>
   </div>
   <div class="col-6">
-    <div class="card"><div class="card-body">2</div></div>
+    <div class="card">
+      <div class="card-body">
+        <app-incrementador [valor]="progreso2" (valorSalida)="progreso2 = $event"></app-incrementador>
+      </div>
+    </div>
   </div>
 </div>
-
-<app-incrementador [valor]="100"></app-incrementador>
-
-<app-incrementador [valor]="70"></app-incrementador>

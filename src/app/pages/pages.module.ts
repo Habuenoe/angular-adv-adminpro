@@ -12,13 +12,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages.component';
+import { ChartsModule } from 'ng2-charts';
 
 const PAGES = [DashboardComponent, ProgressComponent, Grafica1Component, PagesComponent];
 const MODULES = [SharedModule, ComponentsModule];
 
 @NgModule({
   declarations: [...PAGES],
-  imports: [...MODULES, ComponentsModule, CommonModule, FormsModule, AppRoutingModule],
+  imports: [...MODULES, CommonModule, FormsModule, AppRoutingModule, ChartsModule],
   exports: [...PAGES, ...MODULES]
 })
 export class PagesModule {}
