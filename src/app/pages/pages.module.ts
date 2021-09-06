@@ -14,12 +14,13 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages.component';
 import { ChartsModule } from 'ng2-charts';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 const PAGES = [DashboardComponent, ProgressComponent, Grafica1Component, PagesComponent, AccountSettingsComponent];
 const MODULES = [SharedModule, ComponentsModule];
 
 @NgModule({
-  declarations: [...PAGES],
+  declarations: [...PAGES, PromesasComponent],
   imports: [...MODULES, CommonModule, FormsModule, AppRoutingModule, ChartsModule],
   exports: [...PAGES, ...MODULES]
 })
